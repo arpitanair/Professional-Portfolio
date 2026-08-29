@@ -1,0 +1,133 @@
+{
+  "theme": "MIDNIGHT EDITORIAL × DATA INTELLIGENCE",
+  "persona": "Professional, Analytical, Ambitious, Modern, Confident, Intelligent, Clean, Memorable",
+  "typography": {
+    "primary_heading": {
+      "family": "Playfair Display",
+      "style": "Oversized editorial display headings, serif, tracking-tight, high-contrast."
+    },
+    "secondary_heading": {
+      "family": "Inter",
+      "style": "Clean, structured, medium to semi-bold."
+    },
+    "body": {
+      "family": "Inter",
+      "style": "Highly legible, modern sans-serif, neutral."
+    },
+    "accent_metadata": {
+      "family": "Space Mono",
+      "style": "Compact uppercase, tracking-wider, used for tags and metadata to hint at data/analytics."
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed",
+      "caption": "text-sm tracking-[0.2em] uppercase"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#0A0D14",
+      "secondary": "#11151E"
+    },
+    "text": {
+      "primary": "#F2EFE9",
+      "secondary": "#8E95A3",
+      "tertiary": "#5C6370"
+    },
+    "accent": {
+      "primary": "#2563EB",
+      "secondary": "#CBA3B0"
+    },
+    "border": "#2A2F3A",
+    "rules": "No rainbow gradients, no excessive purple gradients, no bright neon cyan everywhere, no giant glowing blobs. Subtle and premium gradients if used. High contrast text on dark backgrounds."
+  },
+  "visual_enhancers": {
+    "textures": "Subtle grain/noise overlay on the background to remove digital flatness.",
+    "borders": "1px solid #2A2F3A, used to create 'Technical' grid layouts for bento boxes.",
+    "shadows": "Minimal. Rely on borders and background shifts for depth in dark mode.",
+    "glassmorphism": "Used for floating navigation on scroll (backdrop-blur-xl bg-[#0A0D14]/70 border-b border-[#2A2F3A]/50).",
+    "hero_overlay": "Analytical dot-grid background in the hero section, very subtle (opacity-10)."
+  },
+  "layouts": {
+    "hero": "Asymmetric two-column. Name ARPITA NAIR as the strongest visual element (H1), professional photo in an elegant editorial frame with subtle parallax. CTAs grouped elegantly.",
+    "bento_strip": "Professional Snapshot. A horizontal or grid-based strip summarizing Program, Specialization, University, CGPA, and Career Direction. Use technical borders.",
+    "featured_projects": "Alternating asymmetrical layouts (image left/text right, then text left/image right). Oversized numbers (01, 02) tucked behind or alongside the content.",
+    "skills": "Grouped bento/tag blocks. No percentage bars. Clean, data-inspired tag clusters.",
+    "career_direction": "Typography-led vertical flow: TECHNOLOGY \u2192 DATA \u2192 INSIGHTS \u2192 BUSINESS DECISIONS.",
+    "contact": "Dramatic oversized text 'LET'S CONNECT.' Big interactive links for EMAIL ME, LINKEDIN, GITHUB.",
+    "spacing": "Generous spacing. py-24 or py-32 for section padding. gap-8 to gap-16 for grid items."
+  },
+  "grids": {
+    "general": "12-column grid system for desktop. Mobile-first stacking.",
+    "bento": "Strict grid hierarchy, dense and compact spacing for data-heavy sections (Snapshot, Skills)."
+  },
+  "motion": {
+    "scroll": "Smooth scrolling (Lenis highly recommended, or CSS smooth scroll).",
+    "reveal": "Text reveal on scroll, staggered entries for lists/bento items.",
+    "interactions": "Magnetic CTA hover, animated underline for links, subtle project image tilt on hover, pointer spotlight effect on project cards.",
+    "parallax": "Gentle portrait parallax in hero section.",
+    "navigation": "Active nav indicator sliding effect, floating glass nav appearing on scroll down.",
+    "accessibility": "MUST respect prefers-reduced-motion media query for all animations."
+  },
+  "accessibility": {
+    "contrast": "Ensure WCAG AA contrast for text against dark backgrounds.",
+    "focus": "Clear focus rings (e.g., ring-2 ring-blue-500 ring-offset-2 ring-offset-[#0A0D14]).",
+    "aria": "Use aria-hidden='true' on decorative oversized numbers and parallax elements.",
+    "motion": "Wrap complex animations with prefers-reduced-motion checks."
+  },
+  "media": {
+    "images": "Use high-quality, professional imagery. Desaturate slightly or use blend modes (luminosity) to fit the dark editorial theme."
+  },
+  "3d_libraries": {
+    "framer_motion": "Core library for scroll reveals, staggered bento entries, active nav indicators, and magnetic hovers.",
+    "lucide_react": "Clean, consistent icons for UI elements."
+  },
+  "image_urls": {
+    "hero_portrait": {
+      "url": "https://images.unsplash.com/photo-1760512901586-f70030a53cd1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHdvbWFuJTIwcG9ydHJhaXQlMjBkYXJrJTIwc3R1ZGlvfGVufDB8fHx8MTc4ODAxODM5NXww&ixlib=rb-4.1.0&q=85",
+      "description": "Professional portrait of a woman in a dark studio setting for the Hero section."
+    },
+    "project_mockup_1": {
+      "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbGFwdG9wJTIwYnJvd3NlciUyMHdpbmRvdyUyMG1vY2t1cCUyMGRhcmt8ZW58MHx8fHwxNzg4MDE4Mzk1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist laptop mockup in a dark setting for Featured Project 01."
+    },
+    "project_mockup_2": {
+      "url": "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwbGFwdG9wJTIwYnJvd3NlciUyMHdpbmRvdyUyMG1vY2t1cCUyMGRhcmt8ZW58MHx8fHwxNzg4MDE4Mzk1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist laptop mockup for Featured Project 02."
+    },
+    "data_background": {
+      "url": "https://images.unsplash.com/photo-1684503830683-108f3e0fd03f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9uJTIwZGFyayUyMG5ldHdvcmt8ZW58MHx8fHwxNzg4MDE4Mzk1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract wavy pattern for subtle background textures or Next Build slot."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Initialize standard React app structure using Vite. Use JavaScript (.jsx) for all components.",
+    "Install tailwindcss, framer-motion, lucide-react, clsx, tailwind-merge.",
+    "Setup routing (react-router-dom) if needed, but a single-page scrolling portfolio is preferred.",
+    "Create a modular folder structure: src/components/ui, src/components/sections.",
+    "Apply Playfair Display from Google Fonts in index.html.",
+    "Implement the Navigation bar to be floating, glassmorphic, and highlight active sections on scroll.",
+    "In the Hero section, ensure ARPITA NAIR is massively oversized, and the portrait image is framed elegantly.",
+    "Implement the 'Professional Snapshot' as a tight bento grid right below the hero.",
+    "For 'Education' and 'Experience', use a vertical timeline approach with subtle border tracking.",
+    "For 'Resume', build a document-style preview card with 'VIEW CV' and 'DOWNLOAD CV' buttons.",
+    "Ensure the 'Career Direction' section uses a typography-led flow with arrows.",
+    "All interactive elements MUST include a 'data-testid' attribute (e.g., data-testid='hero-cta-button').",
+    "Avoid TSX completely, use JSX/JS."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for floating navigation.",
+    "NEVER use generic AI emojis (\ud83e\udd16, \ud83d\udca1, etc.) for icons; stick to lucide-react.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Every interaction needs micro-animations: hover states, transitions, entrance animations.",
+    "Do NOT apply 'transition: all'. Apply specific transitions like 'transition-transform', 'transition-opacity'.",
+    "Do NOT center align the app container. Respect optical alignment over geometrical alignment.",
+    "Use pill-shaped or slightly rounded (rounded-md) technical buttons with interaction animations.",
+    "Do not use complete transparent backgrounds for overlays or navbars. Use bg-[#0A0D14]/70 with backdrop-blur."
+  ],
+  "component_name": "Portfolio App",
+  "component_path": "/app/src"
+}
