@@ -10,9 +10,9 @@ export const profile = {
   linkedinLabel: "linkedin.com/in/arpitanair24",
   github: "https://github.com/arpitanair",
   githubLabel: "github.com/arpitanair",
-  resumeUrl: "/assets/Arpita_Nair_CV.pdf",
+  resumeUrl: `${import.meta.env.BASE_URL}assets/Arpita_Nair_CV.pdf`,
   resumeFileName: "Arpita_Nair_CV.pdf",
-  portrait: "/assets/arpita-portrait.jpg",
+  portrait: `${import.meta.env.BASE_URL}assets/arpita-portrait.jpg`,
   tagline: "DATA • ANALYTICS • BUSINESS",
 };
 
