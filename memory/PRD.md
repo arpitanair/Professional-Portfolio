@@ -32,3 +32,15 @@ Real photo + real CV only; no fabricated content; dark midnight navy + cobalt + 
 1. Collect BizGuard.AI + Netflix dashboard screenshots and certificate images from the user.
 2. Wire real project/credential URLs into `portfolio.ts`.
 3. Optional: Resend-powered contact form.
+
+
+## Update — June 2026 (Fork session)
+- Projects section rewritten as text-first editorial case studies: removed all screenshot mockups, browser frames and image placeholders. Each project now shows large faded number, title, category, date, one-line description, Problem/Purpose, What I Built, Key Features, Technology Stack, What I Learned/Outcome, and buttons only for real URLs (Netflix GitHub live; BizGuard links appear when user supplies URLs in src/data/portfolio.ts).
+- Certifications (Learning Log) redesigned as a numbered editorial credential list: number, date/issuer label, title, topic pills, credential link only if real URL exists. No image placeholders remain.
+- Data model updated in src/data/portfolio.ts (Project: problem/built/features/stack/learned/stats/links; certificates: topics array, no image field).
+- Verified via screenshots: desktop + mobile, no horizontal overflow.
+
+### Remaining backlog
+- P2: Add real GitHub/Live Demo URLs for BizGuard.AI and Live Demo for Netflix when provided (src/data/portfolio.ts links).
+- P2: Add credential URLs for both certifications when provided (credentialUrl fields).
+- P3: Functional backend contact form (currently mailto by user instruction).

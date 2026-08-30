@@ -112,15 +112,16 @@ export interface Project {
   id: string;
   number: string;
   name: string;
-  subtitle: string;
+  category: string;
   date: string;
-  stack: string[];
-  overview: string;
-  blocks: { label: string; text: string }[];
-  stats: { label: string; value: string }[];
+  tagline: string;
+  problem: string;
+  built: string;
   features: string[];
+  stack: string[];
+  learned: string;
+  stats: { label: string; value: string }[];
   links: ProjectLink[];
-  images: { hero: string; support: string[] };
 }
 
 export const projects: Project[] = [
@@ -128,82 +129,41 @@ export const projects: Project[] = [
     id: "bizguard",
     number: "01",
     name: "BizGuard.AI",
-    subtitle: "Business & Security Intelligence Dashboard",
+    category: "Business & Security Intelligence Dashboard",
     date: "August 2026",
+    tagline:
+      "An interactive business and security intelligence dashboard that consolidates operational metrics and protection-oriented information within a unified decision-support interface.",
+    problem:
+      "Bring business performance indicators and security-oriented monitoring into one centralized dashboard designed for improved operational visibility, instead of scattering them across disconnected views.",
+    built:
+      "Developed using Python and Streamlit, with Pandas for structured data handling and Plotly for interactive analytical visualizations. Integrated screenshot-based transaction assessment using Tesseract OCR to extract and process payment information through a structured review workflow.",
+    features: [
+      "Screenshot-based transaction assessment powered by Tesseract OCR",
+      "Business intelligence modules for revenue, orders and customer-retention indicators",
+      "Security intelligence modules covering fraud awareness and payment monitoring",
+      "Protection-focused security alerts within a single decision-support interface",
+    ],
     stack: ["Python", "Streamlit", "Pandas", "Plotly", "Tesseract OCR"],
-    overview:
-      "BizGuard.AI is an interactive business and security intelligence dashboard designed to consolidate operational metrics and protection-oriented information within a unified decision-support interface.",
-    blocks: [
-      {
-        label: "The Purpose",
-        text: "Bring business performance indicators and security-oriented monitoring into one centralized dashboard designed for improved operational visibility.",
-      },
-      {
-        label: "The Build",
-        text: "Developed using Python and Streamlit, with Pandas for structured data handling and Plotly for interactive analytical visualizations.",
-      },
-      {
-        label: "Transaction Assessment",
-        text: "Integrated screenshot-based transaction assessment using Tesseract OCR to extract and process payment information through a structured review workflow.",
-      },
-      {
-        label: "Business Intelligence",
-        text: "Structured dashboard modules for revenue, orders and customer-retention indicators.",
-      },
-      {
-        label: "Security Intelligence",
-        text: "Created protection-focused modules covering fraud awareness, payment monitoring and security alerts.",
-      },
-      {
-        label: "Project Learning",
-        text: "Strengthened practical understanding of dashboard architecture, information hierarchy, data processing, OCR integration and designing analytical interfaces around business-oriented use cases.",
-      },
-    ],
+    learned:
+      "Strengthened practical understanding of dashboard architecture, information hierarchy, data processing, OCR integration and designing analytical interfaces around business-oriented use cases.",
     stats: [],
-    features: [],
     links: [
-      { label: "View Project", href: null },
       { label: "GitHub", href: null },
+      { label: "Live Demo", href: null },
     ],
-    images: {
-      hero: "/assets/projects/bizguard-hero.png",
-      support: [
-        "/assets/projects/bizguard-2.png",
-        "/assets/projects/bizguard-3.png",
-        "/assets/projects/bizguard-4.png",
-      ],
-    },
   },
   {
     id: "netflix",
     number: "02",
     name: "Netflix Strategic Insights Platform",
-    subtitle: "Interactive Content Analytics & Strategic Insights Dashboard",
+    category: "Interactive Content Analytics & Strategic Insights Dashboard",
     date: "July 2026",
-    stack: ["Python", "Pandas", "Streamlit", "Plotly"],
-    overview:
-      "Developed an interactive analytics platform spanning 8,807 Netflix titles, converting content-distribution, rating, country, genre and release-year data into executive-oriented analytical views.",
-    blocks: [
-      {
-        label: "Data Processing",
-        text: "Processed catalogue-level data with Pandas to analyze movie and TV-show distribution and derive portfolio-level indicators.",
-      },
-      {
-        label: "Analytical Experience",
-        text: "Translated exploratory analysis into dynamic Plotly visualizations designed to simplify evaluation of catalogue patterns and content trends.",
-      },
-      {
-        label: "Project Value",
-        text: "Demonstrates the ability to transform a large real-world dataset into structured, interactive and decision-oriented analytical views.",
-      },
-    ],
-    stats: [
-      { label: "Total Titles", value: "8,807" },
-      { label: "Movies", value: "6,131" },
-      { label: "TV Shows", value: "2,676" },
-      { label: "Countries", value: "749" },
-      { label: "Genres", value: "42" },
-    ],
+    tagline:
+      "An interactive analytics platform spanning 8,807 Netflix titles, converting content-distribution, rating, country, genre and release-year data into executive-oriented analytical views.",
+    problem:
+      "Transform a large real-world content catalogue into structured, executive-oriented analytical views that simplify the evaluation of catalogue patterns and content trends.",
+    built:
+      "Processed catalogue-level data with Pandas to analyze movie and TV-show distribution and derive portfolio-level indicators, then translated the exploratory analysis into dynamic Plotly visualizations delivered through a Streamlit interface.",
     features: [
       "Executive Insights Panel",
       "Content distribution visualizations",
@@ -213,21 +173,23 @@ export const projects: Project[] = [
       "Genre analysis",
       "Interactive Content Explorer",
     ],
+    stack: ["Python", "Pandas", "Streamlit", "Plotly"],
+    learned:
+      "Demonstrated the ability to transform a large real-world dataset into structured, interactive and decision-oriented analytical views.",
+    stats: [
+      { label: "Total Titles", value: "8,807" },
+      { label: "Movies", value: "6,131" },
+      { label: "TV Shows", value: "2,676" },
+      { label: "Countries", value: "749" },
+      { label: "Genres", value: "42" },
+    ],
     links: [
       {
-        label: "View GitHub",
+        label: "GitHub",
         href: "https://github.com/arpitanair/NETFLIX-STRATEGIC-INSIGHTS-PLATFORM",
       },
-      { label: "Live Project", href: null },
+      { label: "Live Demo", href: null },
     ],
-    images: {
-      hero: "/assets/projects/netflix-hero.png",
-      support: [
-        "/assets/projects/netflix-2.png",
-        "/assets/projects/netflix-3.png",
-        "/assets/projects/netflix-4.png",
-      ],
-    },
   },
 ];
 
@@ -261,18 +223,16 @@ export const experience = {
 export const certificates = [
   {
     name: "Career Essentials in Generative AI by Microsoft and LinkedIn",
-    issuer: "LinkedIn Learning",
+    issuer: "LinkedIn Learning / Microsoft",
     completion: "August 2026",
-    category: "Generative AI / Professional Learning",
-    image: "/assets/certs/generative-ai-linkedin.png",
+    topics: ["Generative AI Fundamentals", "Professional Learning"],
     credentialUrl: null as string | null,
   },
   {
     name: "Advanced Power BI Workshop",
     issuer: "upGrad",
     completion: "November 2025",
-    category: "Business Intelligence / Data Visualization",
-    image: "/assets/certs/powerbi-upgrad.png",
+    topics: ["Business Intelligence", "Data Visualization"],
     credentialUrl: null as string | null,
   },
 ];
