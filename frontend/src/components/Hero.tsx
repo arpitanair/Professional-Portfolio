@@ -216,7 +216,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 lg:block" aria-hidden="true">
+      <div className="pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 print:hidden lg:block" aria-hidden="true">
         <motion.div
           animate={reduce ? undefined : { y: [0, 8, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}

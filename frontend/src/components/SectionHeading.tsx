@@ -10,7 +10,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({ index, label, title, description }: SectionHeadingProps) {
   return (
-    <div className="mb-10 lg:mb-14">
+    <div className="mb-10 break-inside-avoid lg:mb-14">
       <Reveal>
         <div className="mb-5 flex items-center gap-4">
           <span

@@ -68,3 +68,11 @@ Real photo + real CV only; no fabricated content; dark midnight navy + cobalt + 
 - Headings reduced ~12%: SectionHeading h2 one step down; hero clamp 3.6-8.5rem -> 3.2-7.2rem; contact clamp -> 2.3-6.2rem; about/direction statements trimmed
 - Rows/gaps tightened: education/cert/skill rows, project case studies, experience, resume buttons, snapshot cells, beyond cards, hero min-h-svh -> 90svh
 - No content, structure, colors or animations changed. Verified: no overflow at 1920/390, hero fits one viewport, total page height ~10.3k px
+
+
+## Update — June 2026: Print/PDF stylesheet
+- Added @media print block in index.css: white paper background, dark text, cobalt accents kept, outlined NAIR. preserved via print-specific text-stroke, faded numbers become light watermarks
+- Hidden in print: nav header, scroll progress, custom cursor, noise/dot-grid decor, scroll hint (print:hidden on Hero)
+- Forced opacity/transform reset so Framer Motion reveals are always visible on paper; animations/transitions disabled
+- Page-break rules: each numbered section (main > section[id]:not(#top)) starts on a new page; articles/dl/ul avoid splitting (project case studies allowed to flow); SectionHeading uses break-inside-avoid; min-h overrides removed in print
+- Verified with headless Chromium PDF export: 13 pages, each chapter on its own page, no orphan pages
