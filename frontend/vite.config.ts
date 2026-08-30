@@ -19,6 +19,9 @@ if (!hotReloadDisabled) {
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages serves this project under /Professional-Portfolio/.
+  // Keep '/' everywhere else so the Emergent preview/local dev experience still works.
+  base: process.env.GITHUB_ACTIONS ? "/Professional-Portfolio/" : "/",
   plugins: [
     react(),
     tailwindcss(),
