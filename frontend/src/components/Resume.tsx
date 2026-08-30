@@ -12,10 +12,10 @@ const meta = [
 
 export function Resume() {
   return (
-    <section id="resume" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
+    <section id="resume" className="scroll-mt-24 border-t border-line/50 py-16 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading index="07" label="Resume" title="RESUME / CV" />
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7">
             <Reveal>
               <p className="max-w-xl text-base leading-relaxed text-mist lg:text-lg">
@@ -24,14 +24,14 @@ export function Resume() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-7 flex flex-wrap gap-4">
                 <Magnetic>
                   <a
                     href={profile.resumeUrl}
                     target="_blank"
                     rel="noreferrer"
                     data-testid="resume-view-btn"
-                    className="group inline-flex items-center gap-2 rounded-full bg-cobalt px-7 py-3.5 font-mono text-[11px] uppercase tracking-[0.18em] text-ivory transition-colors duration-300 hover:bg-cobalt-soft hover:text-ink"
+                    className="group inline-flex items-center gap-2 rounded-full bg-cobalt px-6 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ivory transition-colors duration-300 hover:bg-cobalt-soft hover:text-ink"
                   >
                     View Resume
                     <ArrowUpRight
@@ -44,7 +44,7 @@ export function Resume() {
                   href={profile.resumeUrl}
                   download={profile.resumeFileName}
                   data-testid="resume-download-btn"
-                  className="group inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 font-mono text-[11px] uppercase tracking-[0.18em] text-ivory transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-cobalt-soft"
+                  className="group inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ivory transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-cobalt-soft"
                 >
                   Download Resume
                   <Download

@@ -61,3 +61,10 @@ Real photo + real CV only; no fabricated content; dark midnight navy + cobalt + 
 - P2: BizGuard GitHub/Live URLs, Netflix Live URL (portfolio.ts links)
 - P2: Credential URLs for both certifications
 - P3: Backend contact form (currently mailto links only, per user's no-fake-form rule)
+
+
+## Update — June 2026: Compact sizing pass (screenshot-friendly)
+- Section vertical padding reduced ~22% (py-24/36 -> py-16/28; Contact/Direction py-28/40 -> py-20/32)
+- Headings reduced ~12%: SectionHeading h2 one step down; hero clamp 3.6-8.5rem -> 3.2-7.2rem; contact clamp -> 2.3-6.2rem; about/direction statements trimmed
+- Rows/gaps tightened: education/cert/skill rows, project case studies, experience, resume buttons, snapshot cells, beyond cards, hero min-h-svh -> 90svh
+- No content, structure, colors or animations changed. Verified: no overflow at 1920/390, hero fits one viewport, total page height ~10.3k px

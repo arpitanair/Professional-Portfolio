@@ -10,9 +10,9 @@ interface SectionHeadingProps {
 
 export function SectionHeading({ index, label, title, description }: SectionHeadingProps) {
   return (
-    <div className="mb-14 lg:mb-20">
+    <div className="mb-10 lg:mb-14">
       <Reveal>
-        <div className="mb-6 flex items-center gap-4">
+        <div className="mb-5 flex items-center gap-4">
           <span
             data-testid={`section-label-${index}`}
             className="shrink-0 font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft"
@@ -23,13 +23,13 @@ export function SectionHeading({ index, label, title, description }: SectionHead
         </div>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className="max-w-3xl font-display text-4xl leading-[1.05] tracking-tight text-ivory sm:text-5xl lg:text-6xl">
+        <h2 className="max-w-3xl font-display text-3xl leading-[1.05] tracking-tight text-ivory sm:text-4xl lg:text-5xl">
           {title}
         </h2>
       </Reveal>
       {description && (
         <Reveal delay={0.16}>
-          <p className="mt-6 max-w-xl text-sm leading-relaxed text-mist lg:text-base">{description}</p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-mist lg:text-base">{description}</p>
         </Reveal>
       )}
     </div>

@@ -17,13 +17,13 @@ function SkillGroupRow({
     <Reveal delay={index * 0.04}>
       <div
         data-testid={`skill-group-${index}`}
-        className="group relative grid gap-5 py-9 md:grid-cols-12 md:items-baseline md:gap-8 lg:py-12"
+        className="group relative grid gap-5 py-6 md:grid-cols-12 md:items-baseline md:gap-8 lg:py-8"
       >
         <RuleReveal />
         <span className="font-mono text-[11px] tracking-[0.2em] text-faint transition-colors duration-300 group-hover:text-cobalt-soft md:col-span-1">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <h3 className="font-display text-2xl leading-snug text-ivory transition-transform duration-300 group-hover:translate-x-1 md:col-span-4 lg:text-3xl">
+        <h3 className="font-display text-2xl leading-snug text-ivory transition-transform duration-300 group-hover:translate-x-1 md:col-span-4">
           {title}
         </h3>
         <div className="flex flex-wrap gap-2 md:col-span-7">
@@ -38,7 +38,7 @@ function SkillGroupRow({
 
 export function Skills() {
   return (
-    <section id="skills" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
+    <section id="skills" className="scroll-mt-24 border-t border-line/50 py-16 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading
           index="03"

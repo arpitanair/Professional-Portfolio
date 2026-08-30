@@ -9,10 +9,10 @@ const toneClass: Record<string, string> = {
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 py-24 lg:py-36">
+    <section id="about" className="scroll-mt-24 py-16 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <div className="mb-10 flex items-center gap-4">
+          <div className="mb-8 flex items-center gap-4">
             <span
               data-testid="section-label-01"
               className="shrink-0 font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft"
@@ -24,7 +24,7 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <h2 className="max-w-5xl font-display text-[clamp(2.1rem,5.2vw,4.4rem)] leading-[1.08] tracking-tight text-mist">
+          <h2 className="max-w-5xl font-display text-[clamp(1.9rem,4.6vw,3.7rem)] leading-[1.08] tracking-tight text-mist">
             {about.statement.map((line) => (
               <span key={line.accent} className="block">
                 {line.text}
@@ -34,7 +34,7 @@ export function About() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-12">
+        <div className="mt-10 grid gap-8 lg:grid-cols-12">
           <Reveal delay={0.12} className="lg:col-span-4">
             <p className="font-mono text-[11px] uppercase leading-relaxed tracking-[0.25em] text-faint">
               Analytics × Technology

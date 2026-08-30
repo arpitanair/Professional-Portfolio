@@ -11,13 +11,13 @@ function CertificationItem({ cert, index }: { cert: Certificate; index: number }
     <Reveal delay={index * 0.07}>
       <article
         data-testid={`certificate-${index}`}
-        className="group relative grid gap-6 py-10 lg:grid-cols-12 lg:items-start lg:gap-10 lg:py-14"
+        className="group relative grid gap-6 py-7 lg:grid-cols-12 lg:items-start lg:gap-10 lg:py-10"
       >
         <RuleReveal />
         <div className="lg:col-span-2">
           <span
             aria-hidden="true"
-            className="select-none font-display text-5xl leading-none text-surface transition-colors duration-300 group-hover:text-cobalt/30 lg:text-7xl"
+            className="select-none font-display text-4xl leading-none text-surface transition-colors duration-300 group-hover:text-cobalt/30 lg:text-6xl"
           >
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -29,10 +29,10 @@ function CertificationItem({ cert, index }: { cert: Certificate; index: number }
             <span aria-hidden="true">/</span>
             <span>{cert.issuer}</span>
           </div>
-          <h3 className="mt-4 max-w-2xl font-display text-2xl leading-snug text-ivory transition-transform duration-300 group-hover:translate-x-1 lg:text-3xl">
+          <h3 className="mt-3 max-w-2xl font-display text-2xl leading-snug text-ivory transition-transform duration-300 group-hover:translate-x-1">
             {cert.name}
           </h3>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             {cert.topics.map((t) => (
               <span
                 key={t}
@@ -64,7 +64,7 @@ function CertificationItem({ cert, index }: { cert: Certificate; index: number }
 
 export function Learning() {
   return (
-    <section id="certifications" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
+    <section id="certifications" className="scroll-mt-24 border-t border-line/50 py-16 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading index="06" label="Certifications" title="CONTINUOUS LEARNING" />
         <div className="border-b border-line/50">

@@ -4,10 +4,10 @@ import { Reveal } from "./Reveal";
 
 export function Direction() {
   return (
-    <section id="direction" className="scroll-mt-24 border-t border-line/50 py-28 lg:py-40">
+    <section id="direction" className="scroll-mt-24 border-t border-line/50 py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-10">
         <Reveal>
-          <div className="mb-14 flex items-center justify-center gap-4">
+          <div className="mb-10 flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-line/70" aria-hidden="true" />
             <span
               data-testid="section-label-direction"
@@ -19,7 +19,7 @@ export function Direction() {
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-14 flex max-w-md flex-col items-center gap-3">
+        <div className="mx-auto mt-4 flex max-w-md flex-col items-center gap-3">
           {direction.flow.map((word, i) => (
             <Reveal key={word} delay={i * 0.12}>
               <div className="flex flex-col items-center gap-3">
@@ -41,12 +41,12 @@ export function Direction() {
         </div>
 
         <Reveal delay={0.2}>
-          <h2 className="mx-auto mt-20 max-w-5xl font-display text-[clamp(1.9rem,4.6vw,3.8rem)] leading-[1.12] tracking-tight text-ivory">
+          <h2 className="mx-auto mt-12 max-w-5xl font-display text-[clamp(1.7rem,4vw,3.2rem)] leading-[1.12] tracking-tight text-ivory">
             {direction.statement}
           </h2>
         </Reveal>
         <Reveal delay={0.28}>
-          <p className="mx-auto mt-10 max-w-2xl text-sm leading-relaxed text-mist lg:text-base">
+          <p className="mx-auto mt-7 max-w-2xl text-sm leading-relaxed text-mist lg:text-base">
             {direction.copy}
           </p>
         </Reveal>

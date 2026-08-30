@@ -10,7 +10,7 @@ export function Snapshot() {
       >
         {snapshot.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.06} className="bg-ink">
-            <div className="flex h-full flex-col gap-3 p-6 lg:p-8">
+            <div className="flex h-full flex-col gap-2.5 p-5 lg:p-6">
               <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-faint">
                 {s.label}
               </span>

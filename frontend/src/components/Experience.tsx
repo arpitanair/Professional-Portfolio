@@ -8,7 +8,7 @@ function ExperienceItem({ item }: { item: typeof experience }) {
   return (
     <article
       data-testid="experience-deloitte"
-      className="relative grid gap-10 py-12 lg:grid-cols-12 lg:gap-16 lg:py-16"
+      className="relative grid gap-8 py-8 lg:grid-cols-12 lg:gap-14 lg:py-12"
     >
       <RuleReveal />
       <Reveal className="lg:col-span-4">
@@ -26,7 +26,7 @@ function ExperienceItem({ item }: { item: typeof experience }) {
         <p className="max-w-2xl text-sm leading-relaxed text-mist lg:text-base">
           {item.description}
         </p>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {item.tasks.map((t) => (
             <div key={t.label} className="border-l border-cobalt/50 pl-4">
               <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-cobalt-soft">
@@ -36,7 +36,7 @@ function ExperienceItem({ item }: { item: typeof experience }) {
             </div>
           ))}
         </div>
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap gap-2">
           {item.skills.map((s) => (
             <SkillTag key={s} label={s} />
           ))}
@@ -48,7 +48,7 @@ function ExperienceItem({ item }: { item: typeof experience }) {
 
 export function Experience() {
   return (
-    <section id="experience" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
+    <section id="experience" className="scroll-mt-24 border-t border-line/50 py-16 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading
           index="05"

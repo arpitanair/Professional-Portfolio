@@ -6,10 +6,10 @@ const icons = [FolderGit2, BookOpen, LineChart];
 
 export function BeyondClassroom() {
   return (
-    <section aria-label="Beyond the classroom" className="py-24 lg:py-32">
+    <section aria-label="Beyond the classroom" className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <div className="mb-12 flex items-center gap-4">
+          <div className="mb-9 flex items-center gap-4">
             <span className="shrink-0 font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft">
               Beyond the Classroom
             </span>
@@ -23,10 +23,10 @@ export function BeyondClassroom() {
               <Reveal key={b.title} delay={i * 0.07}>
                 <div
                   data-testid={`beyond-card-${i}`}
-                  className="h-full rounded-xl border border-line/60 bg-surface/40 p-7 transition-colors duration-300 hover:border-cobalt/40 lg:p-8"
+                  className="h-full rounded-xl border border-line/60 bg-surface/40 p-6 transition-colors duration-300 hover:border-cobalt/40"
                 >
                   <Icon size={18} className="text-cobalt-soft" aria-hidden="true" />
-                  <h3 className="mt-5 font-mono text-[11px] uppercase tracking-[0.25em] text-ivory">
+                  <h3 className="mt-4 font-mono text-[11px] uppercase tracking-[0.25em] text-ivory">
                     {b.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-mist">{b.text}</p>

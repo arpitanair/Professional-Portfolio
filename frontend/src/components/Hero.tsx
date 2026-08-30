@@ -64,15 +64,15 @@ export function Hero() {
         className="pointer-events-none absolute -top-32 right-[-10%] h-[420px] w-[420px] rounded-full bg-cobalt/10 blur-[120px]"
       />
 
-      <div className="relative mx-auto flex min-h-svh max-w-7xl items-center px-6 pb-24 pt-32 lg:px-10 lg:pt-24">
-        <div className="grid w-full items-center gap-16 lg:grid-cols-12 lg:gap-10">
+      <div className="relative mx-auto flex min-h-[90svh] max-w-7xl items-center px-6 pb-16 pt-28 lg:px-10 lg:pt-20">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-12 lg:gap-10">
           <motion.div
             variants={reduce ? undefined : container}
             initial="hidden"
             animate="show"
             className="lg:col-span-7"
           >
-            <motion.div variants={item} className="mb-8 flex items-center gap-4">
+            <motion.div variants={item} className="mb-6 flex items-center gap-4">
               <span className="h-px w-10 bg-cobalt-soft" aria-hidden="true" />
               <span className="font-mono text-[11px] uppercase tracking-[0.35em] text-cobalt-soft">
                 {profile.tagline}
@@ -88,7 +88,7 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="font-display text-[clamp(3.6rem,10vw,8.5rem)] leading-[0.92] tracking-tight"
+              className="font-display text-[clamp(3.2rem,9vw,7.2rem)] leading-[0.92] tracking-tight"
             >
               ARPITA
               <br />
@@ -96,7 +96,7 @@ export function Hero() {
               <span className="text-cobalt">.</span>
             </motion.h1>
 
-            <motion.div variants={item} className="mt-8 space-y-1.5">
+            <motion.div variants={item} className="mt-6 space-y-1.5">
               <p className="text-base font-medium text-ivory lg:text-lg">{profile.role}</p>
               <p className="text-sm text-mist lg:text-base">
                 {profile.positioning[0]}
@@ -107,12 +107,12 @@ export function Hero() {
 
             <motion.p
               variants={item}
-              className="mt-6 max-w-xl text-sm leading-relaxed text-mist lg:text-base"
+              className="mt-5 max-w-xl text-sm leading-relaxed text-mist lg:text-base"
             >
               {profile.intro}
             </motion.p>
 
-            <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
+            <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-4">
               <Magnetic>
                 <a
                   href="#projects"
@@ -142,7 +142,7 @@ export function Hero() {
               </a>
             </motion.div>
 
-            <motion.div variants={item} className="mt-10 flex items-center gap-5">
+            <motion.div variants={item} className="mt-8 flex items-center gap-5">
               <a
                 href={profile.linkedin}
                 target="_blank"

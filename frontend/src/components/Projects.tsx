@@ -33,13 +33,13 @@ function ProjectCaseStudy({ project, flip }: { project: Project; flip: boolean }
     <article
       ref={ref}
       data-testid={`project-${project.id}`}
-      className="relative py-16 lg:py-24"
+      className="relative py-10 lg:py-16"
     >
       <RuleReveal />
       <motion.span
         aria-hidden="true"
         style={{ y: numberY }}
-        className={`pointer-events-none absolute -top-4 select-none font-display text-[7rem] leading-none text-surface sm:text-[10rem] lg:-top-10 lg:text-[17rem] ${
+        className={`pointer-events-none absolute -top-3 select-none font-display text-[6rem] leading-none text-surface sm:text-[8.5rem] lg:-top-8 lg:text-[14rem] ${
           flip ? "left-0" : "right-0"
         }`}
       >
@@ -53,15 +53,15 @@ function ProjectCaseStudy({ project, flip }: { project: Project; flip: boolean }
             <span aria-hidden="true">/</span>
             <span>{project.category}</span>
           </div>
-          <h3 className="mt-4 max-w-3xl font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-6xl">
+          <h3 className="mt-4 max-w-3xl font-display text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl">
             {project.name}
           </h3>
-          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-mist lg:text-lg lg:leading-relaxed">
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-mist lg:text-lg lg:leading-relaxed">
             {project.tagline}
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-12 lg:gap-16">
+        <div className="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-12 lg:gap-14">
           <Reveal
             delay={0.08}
             className={`lg:col-span-4 lg:self-start ${flip ? "lg:order-2" : ""}`}
@@ -128,7 +128,7 @@ function ProjectCaseStudy({ project, flip }: { project: Project; flip: boolean }
           </Reveal>
 
           <div
-            className={`space-y-10 lg:col-span-8 ${
+            className={`space-y-7 lg:col-span-8 ${
               flip
                 ? "lg:order-1 lg:border-r lg:border-line/50 lg:pr-16"
                 : "lg:border-l lg:border-line/50 lg:pl-16"
@@ -170,7 +170,7 @@ function ProjectCaseStudy({ project, flip }: { project: Project; flip: boolean }
 
 export function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
+    <section id="projects" className="scroll-mt-24 border-t border-line/50 py-16 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading
           index="04"
@@ -185,7 +185,7 @@ export function Projects() {
         <Reveal>
           <div
             data-testid="next-build"
-            className="mt-6 flex flex-col justify-between gap-6 rounded-xl border border-dashed border-line/80 p-10 md:flex-row md:items-center lg:p-14"
+            className="mt-6 flex flex-col justify-between gap-6 rounded-xl border border-dashed border-line/80 p-8 md:flex-row md:items-center lg:p-10"
           >
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft">
