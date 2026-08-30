@@ -1,6 +1,9 @@
+import { useRef } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight, Plus } from "lucide-react";
 import { projects, type Project } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
+import { RuleReveal } from "./RuleReveal";
 import { SectionHeading } from "./SectionHeading";
 import { SkillTag } from "./SkillTag";
 
@@ -15,22 +18,33 @@ function CaseBlock({ label, text }: { label: string; text: string }) {
   );
 }
 
-function CaseStudy({ project, flip }: { project: Project; flip: boolean }) {
+function ProjectCaseStudy({ project, flip }: { project: Project; flip: boolean }) {
+  const ref = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const numberY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [50, -50]);
+
   const liveLinks = project.links.filter((l) => l.href);
 
   return (
     <article
+      ref={ref}
       data-testid={`project-${project.id}`}
-      className="relative border-t border-line/50 py-16 lg:py-24"
+      className="relative py-16 lg:py-24"
     >
-      <span
+      <RuleReveal />
+      <motion.span
         aria-hidden="true"
+        style={{ y: numberY }}
         className={`pointer-events-none absolute -top-4 select-none font-display text-[7rem] leading-none text-surface sm:text-[10rem] lg:-top-10 lg:text-[17rem] ${
           flip ? "left-0" : "right-0"
         }`}
       >
         {project.number}
-      </span>
+      </motion.span>
 
       <div className="relative">
         <Reveal>
@@ -121,7 +135,7 @@ function CaseStudy({ project, flip }: { project: Project; flip: boolean }) {
             }`}
           >
             <Reveal delay={0.1}>
-              <CaseBlock label="Problem / Purpose" text={project.problem} />
+              <CaseBlock label="Purpose" text={project.problem} />
             </Reveal>
             <Reveal delay={0.12}>
               <CaseBlock label="What I Built" text={project.built} />
@@ -129,7 +143,7 @@ function CaseStudy({ project, flip }: { project: Project; flip: boolean }) {
             <Reveal delay={0.14}>
               <div className="border-l border-line/70 pl-5 lg:pl-6">
                 <h4 className="font-mono text-[10px] uppercase tracking-[0.25em] text-cobalt-soft">
-                  Key Features
+                  Core Features
                 </h4>
                 <ul
                   data-testid={`project-${project.id}-features`}
@@ -145,7 +159,7 @@ function CaseStudy({ project, flip }: { project: Project; flip: boolean }) {
               </div>
             </Reveal>
             <Reveal delay={0.16}>
-              <CaseBlock label="What I Learned / Outcome" text={project.learned} />
+              <CaseBlock label="Project Learning / Outcome" text={project.learned} />
             </Reveal>
           </div>
         </div>
@@ -156,16 +170,16 @@ function CaseStudy({ project, flip }: { project: Project; flip: boolean }) {
 
 export function Projects() {
   return (
-    <section id="work" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
+    <section id="projects" className="scroll-mt-24 border-t border-line/50 py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading
           index="04"
-          label="Selected Work"
+          label="Projects"
           title="PROJECTS THAT TURN IDEAS INTO INSIGHTS."
         />
         <div>
           {projects.map((p, i) => (
-            <CaseStudy key={p.id} project={p} flip={i % 2 === 1} />
+            <ProjectCaseStudy key={p.id} project={p} flip={i % 2 === 1} />
           ))}
         </div>
         <Reveal>

@@ -29,10 +29,10 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <p
-            data-testid="section-label-09"
+            data-testid="section-label-08"
             className="font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft"
           >
-            09 / Contact
+            08 / Contact
           </p>
         </Reveal>
         <Reveal delay={0.08}>
@@ -41,10 +41,14 @@ export function Contact() {
           </p>
         </Reveal>
         <Reveal delay={0.14}>
-          <h2 className="mt-6 font-display text-[clamp(3.4rem,10vw,9rem)] leading-[0.95] tracking-tight text-ivory">
-            LET'S
+          <h2
+            data-testid="contact-heading"
+            className="mt-6 font-display text-[clamp(2.6rem,8vw,7.5rem)] leading-[0.98] tracking-tight text-ivory"
+          >
+            LET'S TURN DATA
             <br />
-            CONNECT<span className="text-cobalt">.</span>
+            INTO <span className="text-outline">DECISIONS</span>
+            <span className="text-cobalt">.</span>
           </h2>
         </Reveal>
 

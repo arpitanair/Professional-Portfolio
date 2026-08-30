@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Cursor } from "@/components/Cursor";
 import { Hero } from "@/components/Hero";
 import { Snapshot } from "@/components/Snapshot";
 import { About } from "@/components/About";
@@ -20,6 +21,7 @@ export default function Home() {
         aria-hidden="true"
         className="noise-bg pointer-events-none fixed inset-0 z-[5] opacity-[0.04]"
       />
+      <Cursor />
       <Navigation />
       <main>
         <Hero />

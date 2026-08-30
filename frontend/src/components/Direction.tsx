@@ -7,12 +7,16 @@ export function Direction() {
     <section id="direction" className="scroll-mt-24 border-t border-line/50 py-28 lg:py-40">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-10">
         <Reveal>
-          <p
-            data-testid="section-label-07"
-            className="font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft"
-          >
-            07 / Direction
-          </p>
+          <div className="mb-14 flex items-center justify-center gap-4">
+            <span className="h-px w-12 bg-line/70" aria-hidden="true" />
+            <span
+              data-testid="section-label-direction"
+              className="font-mono text-[11px] uppercase tracking-[0.3em] text-cobalt-soft"
+            >
+              Direction
+            </span>
+            <span className="h-px w-12 bg-line/70" aria-hidden="true" />
+          </div>
         </Reveal>
 
         <div className="mx-auto mt-14 flex max-w-md flex-col items-center gap-3">

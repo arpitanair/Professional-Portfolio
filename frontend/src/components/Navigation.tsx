@@ -13,9 +13,9 @@ const LINKS = [
   { id: "about", label: "About" },
   { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
-  { id: "work", label: "Work" },
+  { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
-  { id: "learning", label: "Learning" },
+  { id: "certifications", label: "Certifications" },
   { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
@@ -93,7 +93,7 @@ export function Navigation() {
                   href={`#${l.id}`}
                   data-testid={`nav-link-${l.id}`}
                   className={`underline-grow font-mono text-[11px] uppercase tracking-[0.18em] ${
-                    active === l.id ? "text-ivory" : "text-mist hover:text-ivory"
+                    active === l.id ? "underline-on text-ivory" : "text-mist hover:text-ivory"
                   }`}
                 >
                   {l.label}
@@ -120,7 +120,7 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[70] flex flex-col bg-ink/95 backdrop-blur-2xl"
+            className="fixed inset-0 z-[70] flex flex-col bg-ink backdrop-blur-2xl"
           >
             <div className="flex items-center justify-between px-6 py-4">
               <span className="font-mono text-sm tracking-[0.3em] text-ivory">

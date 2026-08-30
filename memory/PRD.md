@@ -44,3 +44,20 @@ Real photo + real CV only; no fabricated content; dark midnight navy + cobalt + 
 - P2: Add real GitHub/Live Demo URLs for BizGuard.AI and Live Demo for Netflix when provided (src/data/portfolio.ts links).
 - P2: Add credential URLs for both certifications when provided (credentialUrl fields).
 - P3: Functional backend contact form (currently mailto by user instruction).
+
+
+## Update — June 2026: Full premium refinement (tested 13/13 pass, iteration_1.json)
+- Nav renamed: WORK→PROJECTS (#projects), LEARNING→CERTIFICATIONS (#certifications); active link = blue dot + persistent underline; mobile overlay now solid bg-ink.
+- Chapter numbering: 01 About, 02 Education, 03 Toolkit, 04 Projects, 05 Experience, 06 Certifications, 07 Resume, 08 Contact. Direction is unnumbered interstitial.
+- Hero: "Explore My Work" magnetic CTA (→#projects), cursor-reactive portrait parallax, kept ARPITA/NAIR. identity.
+- New components: Magnetic.tsx, Cursor.tsx (desktop-only minimal ring, reduced-motion aware), RuleReveal.tsx (animated hairline dividers).
+- Skills: editorial numbered rows (no cards). Experience: editorial layout (card removed). Resume: text-first (mockup/preview removed), View/Download buttons + mono meta list. Contact: "LET'S TURN DATA INTO DECISIONS." heading.
+- Projects: faded numbers now scroll-parallax; blocks renamed Purpose / What I Built / Core Features / Project Learning-Outcome.
+- Extracted reusable data-driven components: ProjectCaseStudy, CertificationItem, EducationItem, ExperienceItem, SkillGroupRow.
+- Removed dead assets (resume-preview.png, certs/, projects/).
+- Testing agent: frontend 100% pass — anchors, CTAs, PDF 200, mobile 390/768 no overflow, no placeholder text, reduced-motion verified.
+
+### Backlog (unchanged)
+- P2: BizGuard GitHub/Live URLs, Netflix Live URL (portfolio.ts links)
+- P2: Credential URLs for both certifications
+- P3: Backend contact form (currently mailto links only, per user's no-fake-form rule)

@@ -1,7 +1,40 @@
 import { skillGroups } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
+import { RuleReveal } from "./RuleReveal";
 import { SectionHeading } from "./SectionHeading";
 import { SkillTag } from "./SkillTag";
+
+function SkillGroupRow({
+  title,
+  skills,
+  index,
+}: {
+  title: string;
+  skills: string[];
+  index: number;
+}) {
+  return (
+    <Reveal delay={index * 0.04}>
+      <div
+        data-testid={`skill-group-${index}`}
+        className="group relative grid gap-5 py-9 md:grid-cols-12 md:items-baseline md:gap-8 lg:py-12"
+      >
+        <RuleReveal />
+        <span className="font-mono text-[11px] tracking-[0.2em] text-faint transition-colors duration-300 group-hover:text-cobalt-soft md:col-span-1">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <h3 className="font-display text-2xl leading-snug text-ivory transition-transform duration-300 group-hover:translate-x-1 md:col-span-4 lg:text-3xl">
+          {title}
+        </h3>
+        <div className="flex flex-wrap gap-2 md:col-span-7">
+          {skills.map((s) => (
+            <SkillTag key={s} label={s} />
+          ))}
+        </div>
+      </div>
+    </Reveal>
+  );
+}
 
 export function Skills() {
   return (
@@ -9,27 +42,13 @@ export function Skills() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading
           index="03"
-          label="Capabilities"
+          label="Toolkit"
           title="SKILLS & TOOLKIT"
           description="A modular view of the tools and disciplines I work with — organized by craft, not by percentages."
         />
-        <div data-testid="skills-grid" className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div data-testid="skills-list" className="border-b border-line/50">
           {skillGroups.map((g, gi) => (
-            <Reveal key={g.title} delay={gi * 0.05}>
-              <div
-                data-testid={`skill-group-${gi}`}
-                className="h-full rounded-xl border border-line/60 bg-surface/50 p-6 transition-colors duration-300 hover:border-cobalt/50 lg:p-7"
-              >
-                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-cobalt-soft">
-                  {g.title}
-                </span>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {g.skills.map((s) => (
-                    <SkillTag key={s} label={s} />
-                  ))}
-                </div>
-              </div>
-            </Reveal>
+            <SkillGroupRow key={g.title} title={g.title} skills={g.skills} index={gi} />
           ))}
         </div>
       </div>
