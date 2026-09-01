@@ -188,7 +188,7 @@ export function Hero() {
                   src={profile.portrait}
                   alt="Arpita Nair — professional portrait"
                   data-testid="hero-portrait"
-                  className="aspect-[3/4] w-full rounded-xl rounded-bl-[4.4rem] rounded-tr-[4.4rem] object-cover object-top"
+                  className="aspect-square w-full rounded-xl rounded-bl-[4.4rem] rounded-tr-[4.4rem] object-cover object-top"
                   loading="eager"
                 />
                 <div

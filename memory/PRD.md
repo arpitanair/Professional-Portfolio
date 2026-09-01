@@ -76,3 +76,9 @@ Real photo + real CV only; no fabricated content; dark midnight navy + cobalt + 
 - Forced opacity/transform reset so Framer Motion reveals are always visible on paper; animations/transitions disabled
 - Page-break rules: each numbered section (main > section[id]:not(#top)) starts on a new page; articles/dl/ul avoid splitting (project case studies allowed to flow); SectionHeading uses break-inside-avoid; min-h overrides removed in print
 - Verified with headless Chromium PDF export: 13 pages, each chapter on its own page, no orphan pages
+
+
+## Update — Sep 2026: Profile photo replaced
+- New 1:1 professional photo (user-uploaded) saved as /assets/arpita-portrait-2026.jpg (optimized 107KB JPG)
+- Hero img aspect changed 3/4 -> square to match new photo without cropping the face; frame/border/chips/styling unchanged
+- Old portrait files removed; verified desktop + mobile
