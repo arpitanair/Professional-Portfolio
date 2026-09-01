@@ -82,3 +82,12 @@ Real photo + real CV only; no fabricated content; dark midnight navy + cobalt + 
 - New 1:1 professional photo (user-uploaded) saved as /assets/arpita-portrait-2026.jpg (optimized 107KB JPG)
 - Hero img aspect changed 3/4 -> square to match new photo without cropping the face; frame/border/chips/styling unchanged
 - Old portrait files removed; verified desktop + mobile
+
+
+## Update — Sep 2026: Security audit + fixes (verified by testing agent, 12/12 pass)
+- Audit verdict: visitor-facing site safe (no XSS sinks, all target=_blank have rel=noreferrer, no secrets in bundle)
+- SEC-001 (MEDIUM) fixed: removed unauthenticated POST/GET /api/status boilerplate endpoints; backend now exposes only GET /api/ health -> {"status":"ok"} (404 verified on public URL)
+- SEC-002 (LOW) fixed: CORS allow_credentials=False, allow_methods=["GET"] (credentials header confirmed absent at edge and app layer)
+- Regression suite: /app/backend/tests/test_security_fixes.py (pytest). Frontend smoke passed, zero /api calls from site.
+- Remaining (informational, user decision): CV PDF contains phone number (intentional public CV); platform edge controls security headers/CORS header rewriting; unused Mongo import kept intentionally (platform template)
+- NOTE: fixes require a redeploy to take effect on the live deployed app
